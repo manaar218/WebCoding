@@ -20,7 +20,7 @@ export default function ButtonAppBar() {
             </Link>
             <AccessAlarm/>
             
-          Title Goes Here
+          Sony Liv
             
         </Toolbar>
       </AppBar>
