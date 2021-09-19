@@ -1,35 +1,34 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import DatePickers from '../Components/DateTimePicker';
-import SimpleCard from '../Components/HomeMultiCard';
-import ContainedButtons from '../Components/Buttons1';
-import BasicButtonGroup from '../Components/BasicButtonGroup';
-import FloatingActionButtons from '../Components/FloatingActionButton';
-import MaterialUIPickers from '../Components/DateTimePicker';
-import LabelBottomNavigation from '../Components/BottomNavBar';
-import SimpleBreadcrumbs from '../Components/Breadcrumbs';
-import CustomizedRadios from '../Components/RadioGroup';
-import ControlledAccordions from '../Components/ControlledAccordion';
-
-
+import SimpleTabs from '../Components/tabs';
+import ResponsiveFontSizes from '../Components/MostWatched';
+import Poster1 from '../Assets/chalo koi baat nahi.jpeg';
+import Poster2 from '../Assets/scam 1982.jpeg';
+import Poster3 from '../Assets/Gullak.jpeg';
+import Poster4 from '../Assets/Your Honor.jpeg';
+import TrendingTrailers from '../Components/TrendingTrailers';
+import SwipeableTextMobileStepper from '../Components/Carousel';
+ 
 export default function Home() {
   return (
+ 
     <React.Fragment>
         <Container fixed>
-
-           {/* <SimpleBreadcrumbs/>
-           <ContainedButtons/>
-           <BasicButtonGroup/>
-           <CustomizedRadios/>
-           <ControlledAccordions/>
-          
-            <SimpleCard/>
-
-            <MaterialUIPickers/>
-            <FloatingActionButtons/>
-            <LabelBottomNavigation/>  */}
-            
+       
+        <SimpleTabs/>
+        <SwipeableTextMobileStepper/>
+        <ResponsiveFontSizes/>
+        <img src= {Poster1} className= "POSTER1" alt= "POSTER1" width="200" height="300"/>
+        <img src= {Poster2} className= "POSTER2" alt= "POSTER2" width="200" height="300"/>
+        <img src= {Poster3} className= "POSTER2" alt= "POSTER2" width="200" height="300"/>
+        <img src= {Poster4} className= "POSTER2" alt= "POSTER2" width="200" height="300"/>
+        
+        <TrendingTrailers/>
+        <img src= {Poster1} className= "POSTER1" alt= "POSTER1" width="200" height="300"/>
+        <img src= {Poster2} className= "POSTER2" alt= "POSTER2" width="200" height="300"/>
+        <img src= {Poster3} className= "POSTER2" alt= "POSTER2" width="200" height="300"/>
+        <img src= {Poster4} className= "POSTER2" alt= "POSTER2" width="200" height="300"/>
         </Container>
     </React.Fragment>
-  );
+ );
 }
