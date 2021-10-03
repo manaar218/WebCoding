@@ -42,18 +42,46 @@ export default function Season2Page() {
           <SimpleAccordion/>        {/*  Latest episode/ Oldest episode */}
           </Grid>
 
-        </Grid>
-
+          <Grid item xs={12} lg={6}>
           <S2Ep1Card/>              {/*          ''     Episode 1 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep2Card/>              {/*          ''     Episode 2 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep3Card/>              {/*          ''     Episode 3 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep4Card/>              {/*          ''     Episode 4 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep5Card/>              {/*          ''     Episode 5 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep6Card/>              {/*          ''     Episode 6 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep7Card/>              {/*          ''     Episode 7 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep8Card/>              {/*          ''     Episode 8 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep9Card/>              {/*          ''     Episode 9 */}
+          </Grid>
+
+          <Grid item xs={12} lg={6}>
           <S2Ep10Card/>             {/*          ''     Episode 10 */}
+          </Grid>
+          </Grid>
        
         </Container>
     </React.Fragment>
