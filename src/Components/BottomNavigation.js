@@ -7,10 +7,13 @@ import HomeIcon from '@material-ui/icons/Home';
 import AddIcon from '@material-ui/icons/Add';
 import SettingsIcon from '@material-ui/icons/Settings';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import { Grid } from '@material-ui/core';
  
 const useStyles = makeStyles({
   root: {
     width: 1550,
+    // backgroundColor: 'black',
+    color: 'white',
   },
 });
  
@@ -19,6 +22,7 @@ export default function SimpleBottomNavigation() {
   const [value, setValue] = React.useState(0);
  
   return (
+    <Grid container spacing={1}>
     <BottomNavigation
       value={value}
       onChange={(event, newValue) => {
@@ -27,11 +31,27 @@ export default function SimpleBottomNavigation() {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+      <Grid item xs={3}>
+      <BottomNavigationAction label="Home" icon={<HomeIcon/>} />
+      </Grid>
+
+      <Grid item xs={3}>
       <BottomNavigationAction label="Search" icon={<SearchIcon/>} />
+      </Grid>
+
+      <Grid item xs={3}>
       <BottomNavigationAction label="Premium" icon={<AttachMoneyIcon />} />
+      </Grid>
+
+      <Grid item xs={3}>
       <BottomNavigationAction label="My List" icon={<AddIcon />} />
-      <BottomNavigationAction label="Settings" icon={<SettingsIcon />} />
+      </Grid>
+
+      <Grid item xs={3}>
+      <BottomNavigationAction label="Settings" icon={<SettingsIcon />} color= 'white'/>
+      </Grid>
+
     </BottomNavigation>
+    </Grid>
   );
 }

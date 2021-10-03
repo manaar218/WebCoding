@@ -14,16 +14,13 @@ import TranslateIcon from '@material-ui/icons/Translate';
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
+    // backgroundColor: 'black',
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    // backgroundColor: 'black',
   },
-  title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
-  },
+ 
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -47,9 +44,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'black',
   },
   inputRoot: {
-    color: 'inherit',
+    backgroundColor: 'black',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -59,18 +57,21 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     [theme.breakpoints.up('md')]: {
       width: '20ch',
+      backgroundColor: 'black',
     },
   },
   sectionDesktop: {
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
+      backgroundColor: 'black'
     },
   },
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: {
       display: 'none',
+      backgroundColor: 'black'
     },
   },
 }));

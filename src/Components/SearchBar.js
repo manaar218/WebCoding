@@ -59,7 +59,7 @@ export default function FreeSoloCreateOption() {
       style={{ width: 330 }}
       freeSolo
       renderInput={(params) => (
-        <TextField {...params} label="Search Keywords or Episode Number" variant="outlined" />
+        <TextField {...params} label="Search Keywords or Episode Number" variant="outlined" color='white'/>
       )}
     />
   );
