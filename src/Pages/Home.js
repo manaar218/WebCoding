@@ -10,21 +10,21 @@ import TrendingTrailers from '../Components/HomePage/TrendingTrailers';
 import SwipeableTextMobileStepper from '../Components/HomePage/Carousel';
 import Trending from '../Components/HomePage/Trending';
 import SingleLineImageList from '../Components/HomePage/Most';
- 
+
 export default function Home() {
   return (
- 
+
     <React.Fragment>
-        <Container fixed>
-       
-        <SimpleTabs/>
-        <SwipeableTextMobileStepper/>
-        <ResponsiveFontSizes/>
-        <SingleLineImageList/>
-        <TrendingTrailers/>
-        
-        <Trending/>
-        </Container>
+      <Container fixed>
+
+        <SimpleTabs />
+        <SwipeableTextMobileStepper />
+        <ResponsiveFontSizes />
+        <SingleLineImageList />
+        <TrendingTrailers />
+
+        <Trending />
+      </Container>
     </React.Fragment>
- );
+  );
 }

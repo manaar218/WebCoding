@@ -9,8 +9,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import LOGOLIV from '../Assets/LOGOLIV.png';
 import TranslateIcon from '@material-ui/icons/Translate';
- 
- 
+
+
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     // backgroundColor: 'black',
   },
- 
+
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -36,6 +36,12 @@ const useStyles = makeStyles((theme) => ({
       width: 'auto',
     },
   },
+
+  AppBar: {
+    background: '#171716',
+    boxShadow: '0 0 0 0',
+  },
+
   searchIcon: {
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -64,60 +70,60 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     [theme.breakpoints.up('md')]: {
       display: 'flex',
-      backgroundColor: 'black'
+      backgroundColor: 'black',
     },
   },
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: {
       display: 'none',
-      backgroundColor: 'black'
+      backgroundColor: 'black',
     },
   },
 }));
- 
+
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
- 
+
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
- 
+
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
- 
+
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
   };
-  
+
   const handleMenuClose = () => {
     setAnchorEl(null);
     handleMobileMenuClose();
   };
-  
+
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
- 
+
   const handleMobileMenuOpen2 = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
- 
+
   const handleLanguageMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
- 
+
   const handleMobileMenuClose2 = () => {
     setMobileMoreAnchorEl(null);
   };
-  
+
   const handleMenuClose2 = () => {
     setAnchorEl(null);
     handleMobileMenuClose2();
   };
-  
+
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -134,7 +140,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem onClick={handleMenuClose}>Manage Accounts</MenuItem>
     </Menu>
   );
- 
+
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
@@ -159,55 +165,56 @@ export default function PrimarySearchAppBar() {
       </MenuItem>
     </Menu>
   );
- 
- 
+
+
   const menuId2 = 'language-menu';
-    const renderMenu2 = (
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        id={menuId2}
-        keepMounted
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMenuOpen}
-        onClose={handleMenuClose2}
-      >
-        <MenuItem onClick={handleMenuClose2}>Hindi</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>Telugu</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>Tamil</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>English</MenuItem>
-        <MenuItem onClick={handleMenuClose2}>Marathi</MenuItem>
-      </Menu>
-    );
-  
-    const mobileMenuId2 = 'language-menu-mobile';
-    const renderMobileMenu2 = (
-      <Menu
-        anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        id={mobileMenuId2}
-        keepMounted
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMobileMenuOpen}
-        onClose={handleMobileMenuClose2}
-      >
-        <MenuItem onClick={handleLanguageMenuOpen}>
-          <IconButton
-            aria-label="Language"
-            aria-controls="Language"
-            aria-haspopup="true"
-            color="inherit"
-          >
-            <TranslateIcon/>
-          </IconButton>
-          <p>language</p>
-        </MenuItem>
-      </Menu>
-    );
-  
+  const renderMenu2 = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={menuId2}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMenuOpen}
+      onClose={handleMenuClose2}
+    >
+      <MenuItem onClick={handleMenuClose2}>Hindi</MenuItem>
+      <MenuItem onClick={handleMenuClose2}>Telugu</MenuItem>
+      <MenuItem onClick={handleMenuClose2}>Tamil</MenuItem>
+      <MenuItem onClick={handleMenuClose2}>English</MenuItem>
+      <MenuItem onClick={handleMenuClose2}>Marathi</MenuItem>
+    </Menu>
+  );
+
+  const mobileMenuId2 = 'language-menu-mobile';
+  const renderMobileMenu2 = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={mobileMenuId2}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose2}
+    >
+      <MenuItem onClick={handleLanguageMenuOpen}>
+        <IconButton
+          aria-label="Language"
+          aria-controls="Language"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <TranslateIcon />
+        </IconButton>
+        <p>language</p>
+      </MenuItem>
+    </Menu>
+  );
+
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.AppBar}
+      >
         <Toolbar>
           <IconButton
             edge="start"
@@ -215,11 +222,11 @@ export default function PrimarySearchAppBar() {
             color="inherit"
             aria-label="open drawer"
           >
-            <img src= {LOGOLIV} className= "LOGO" alt= "LOGO" width="80" height="80"/>
+            <img src={LOGOLIV} className="LOGO" alt="LOGO" width="80" height="80" />
           </IconButton>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-          <IconButton
+            <IconButton
               edge="end"
               aria-label="Language"
               aria-controls={menuId2}
@@ -239,8 +246,8 @@ export default function PrimarySearchAppBar() {
             >
               <AccountCircle />
             </IconButton>
- 
- 
+
+
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
@@ -260,7 +267,7 @@ export default function PrimarySearchAppBar() {
       {renderMenu2}
       {renderMobileMenu}
       {renderMenu}
- 
+
     </div>
   );
 }

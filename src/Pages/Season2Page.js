@@ -20,70 +20,70 @@ import { Grid } from '@material-ui/core';
 export default function Season2Page() {
   return (
     <React.Fragment>
-        <Container fixed>
+      <Container fixed>
         <Grid container spacing={1}>
 
           <Grid item xs={1} lg={3}>
-          <ArrowBackIosIcon/>       {/* 'Back' icon */}
+            <ArrowBackIosIcon />       {/* 'Back' icon */}
           </Grid>
 
           <Grid item xs={11} lg={9}>
-          <Types/>                  {/*  Name of the serial */}
+            <Types />                  {/*  Name of the serial */}
           </Grid>
 
         </Grid>
 
-          <FreeSoloCreateOption/>   {/*  Search Bar */}
-          <OutlinedButtons/>        {/*  Season 1, 2, 3 buttons */}
+        <FreeSoloCreateOption />   {/*  Search Bar */}
+        <OutlinedButtons />        {/*  Season 1, 2, 3 buttons */}
 
         <Grid container spacing={1}>
 
           <Grid item xs={12} lg={12}>
-          <SimpleAccordion/>        {/*  Latest episode/ Oldest episode */}
+            <SimpleAccordion />        {/*  Latest episode/ Oldest episode */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep1Card/>              {/*          ''     Episode 1 */}
+            <S2Ep1Card />              {/*          ''     Episode 1 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep2Card/>              {/*          ''     Episode 2 */}
+            <S2Ep2Card />              {/*          ''     Episode 2 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep3Card/>              {/*          ''     Episode 3 */}
+            <S2Ep3Card />              {/*          ''     Episode 3 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep4Card/>              {/*          ''     Episode 4 */}
+            <S2Ep4Card />              {/*          ''     Episode 4 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep5Card/>              {/*          ''     Episode 5 */}
+            <S2Ep5Card />              {/*          ''     Episode 5 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep6Card/>              {/*          ''     Episode 6 */}
+            <S2Ep6Card />              {/*          ''     Episode 6 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep7Card/>              {/*          ''     Episode 7 */}
+            <S2Ep7Card />              {/*          ''     Episode 7 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep8Card/>              {/*          ''     Episode 8 */}
+            <S2Ep8Card />              {/*          ''     Episode 8 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep9Card/>              {/*          ''     Episode 9 */}
+            <S2Ep9Card />              {/*          ''     Episode 9 */}
           </Grid>
 
           <Grid item xs={12} lg={6}>
-          <S2Ep10Card/>             {/*          ''     Episode 10 */}
+            <S2Ep10Card />             {/*          ''     Episode 10 */}
           </Grid>
-          </Grid>
-       
-        </Container>
+        </Grid>
+
+      </Container>
     </React.Fragment>
   );
 }
