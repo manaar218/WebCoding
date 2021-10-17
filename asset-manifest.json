@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/WebCoding/static/css/main.c04be919.chunk.css",
-    "main.js": "/WebCoding/static/js/main.3fe4e52b.chunk.js",
-    "main.js.map": "/WebCoding/static/js/main.3fe4e52b.chunk.js.map",
+    "main.css": "/WebCoding/static/css/main.884f112b.chunk.css",
+    "main.js": "/WebCoding/static/js/main.9af023b3.chunk.js",
+    "main.js.map": "/WebCoding/static/js/main.9af023b3.chunk.js.map",
     "runtime-main.js": "/WebCoding/static/js/runtime-main.184505f4.js",
     "runtime-main.js.map": "/WebCoding/static/js/runtime-main.184505f4.js.map",
     "static/js/2.2f010edd.chunk.js": "/WebCoding/static/js/2.2f010edd.chunk.js",
     "static/js/2.2f010edd.chunk.js.map": "/WebCoding/static/js/2.2f010edd.chunk.js.map",
     "index.html": "/WebCoding/index.html",
-    "static/css/main.c04be919.chunk.css.map": "/WebCoding/static/css/main.c04be919.chunk.css.map",
+    "static/css/main.884f112b.chunk.css.map": "/WebCoding/static/css/main.884f112b.chunk.css.map",
     "static/js/2.2f010edd.chunk.js.LICENSE.txt": "/WebCoding/static/js/2.2f010edd.chunk.js.LICENSE.txt",
     "static/media/Arrow1.e582ffff.svg": "/WebCoding/static/media/Arrow1.e582ffff.svg",
     "static/media/Gullak.e175699f.jpeg": "/WebCoding/static/media/Gullak.e175699f.jpeg",
@@ -52,7 +52,7 @@
   "entrypoints": [
     "static/js/runtime-main.184505f4.js",
     "static/js/2.2f010edd.chunk.js",
-    "static/css/main.c04be919.chunk.css",
-    "static/js/main.3fe4e52b.chunk.js"
+    "static/css/main.884f112b.chunk.css",
+    "static/js/main.9af023b3.chunk.js"
   ]
 }
