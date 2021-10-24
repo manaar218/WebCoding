@@ -16,15 +16,13 @@ export default function Types() {
 
   return (
     <div className={classes.root}>
-      
+
       {/* <Grid container spacing={5}> */}
-
-
 
       <Typography variant="h4" gutterBottom>
         Kuch Rang Pyaar Ke Aise Bhi
       </Typography>
-     
+
       {/* </Grid> */}
     </div>
   );

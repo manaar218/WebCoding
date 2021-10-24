@@ -2,14 +2,26 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete, { createFilterOptions } from '@material-ui/lab/Autocomplete';
+import { mergeClasses } from '@material-ui/styles';
+import { CallMissedSharp } from '@material-ui/icons';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+  Text: {
+    borderRadius: 15,
+    borderColor: 'white'
+  }
+}));
 
 const filter = createFilterOptions();
 
 export default function FreeSoloCreateOption() {
   const [value, setValue] = React.useState(null);
 
+  const classes = useStyles();
+
   return (
-    <Autocomplete
+    <Autocomplete className={classes.Text}
       value={value}
       onChange={(event, newValue) => {
         if (typeof newValue === 'string') {
@@ -57,9 +69,10 @@ export default function FreeSoloCreateOption() {
       }}
       renderOption={(option) => option.title}
       style={{ width: 330 }}
+      color='white'
       freeSolo
       renderInput={(params) => (
-        <TextField {...params} label="Search Keywords or Episode Number" variant="outlined" color='white'/>
+        <TextField {...params} label="Search Keywords or Episode Number" variant="outlined" />
       )}
     />
   );
@@ -80,7 +93,7 @@ const top100Films = [
   { title: 'Episode 11', year: 2016 },
   { title: 'Episode 12', year: 2016 },
   { title: 'Episode 13', year: 2016 },
-  { title: 'Episode 14', year:2016 },
+  { title: 'Episode 14', year: 2016 },
   { title: 'Episode 15', year: 2016 },
   { title: 'Episode 16', year: 2016 },
   { title: 'Episode 17', year: 2016 },

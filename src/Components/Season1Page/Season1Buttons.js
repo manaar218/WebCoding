@@ -1,9 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { Link, Router } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
-
+import {
+  withStyles,
+  makeStyles,
+} from '@material-ui/core/styles';
+import yellow from '@material-ui/core/colors/yellow';
+import grey from '@material-ui/core/colors/grey';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,46 +18,59 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(yellow[500]),
+    backgroundColor: yellow[600],
+    '&:hover': {
+      backgroundColor: yellow[700],
+    },
+  },
+}))(Button);
+
+const ComplexButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(grey[500]),
+    color: grey[600],
+    '&:hover': {
+      color: grey[700],
+    },
+  },
+}))(Button);
+
 export default function OutlinedButtons() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      {/* <Button variant="outlined">Default</Button> */}
 
       <Grid container spacing={1}>
 
         <Grid item xs={4}>
           <Link to={process.env.PUBLIC_URL + '/kuch-rang-pyaar-ke-aise-bhi-season-1'}>
-            <Button variant="contained" color='yellow'>
+            <ColorButton variant="contained" color="primary" className={classes.margin}>
               Season 1
-            </Button>
+            </ColorButton>
           </Link>
         </Grid>
 
         <Grid item xs={4}>
           <Link to={process.env.PUBLIC_URL + '/kuch-rang-pyaar-ke-aise-bhi-season-2'}>
-            <Button variant="outlined" color='primary'>
+            <ComplexButton variant="outlined" color="primary" className={classes.margin}>
               Season 2
-            </Button>
+            </ComplexButton>
           </Link>
         </Grid>
 
         <Grid item xs={4}>
           <Link to={process.env.PUBLIC_URL + '/kuch-rang-pyaar-ke-aise-bhi-season-3'}>
-            <Button variant="outlined" color='primary'>
+            <ComplexButton variant="outlined" color="primary" className={classes.margin}>
               Season 3
-            </Button>
+            </ComplexButton>
           </Link>
         </Grid>
       </Grid>
 
-      {/* <Button variant="outlined" disabled>
-        Disabled
-      </Button>
-      <Button variant="outlined" color="primary" href="#outlined-buttons">
-        Link
-      </Button> */}
     </div>
   );
 }

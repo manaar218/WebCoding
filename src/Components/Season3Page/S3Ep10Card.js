@@ -8,11 +8,12 @@ import Typography from '@material-ui/core/Typography';
 import HdIcon from '@material-ui/icons/Hd';
 import S3Ep10 from '../../Assets/S3Ep10.jpg';
 import { Grid } from '@material-ui/core';
+import { Link, Router } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: "100%",
-    background: 'black',
+    background: '#19191A',
   },
   media: {
     height: 20,
@@ -40,11 +41,13 @@ export default function S3Ep10Card() {
               <img src={S3Ep10} className="Episode 10 - Mutual Misunderstanding" alt="Episode 10 - Mutual Misunderstanding" height="100%" width="100%" />
             </Grid>
 
-            <Grid item xs={6}>
-              <Typography gutterBottom variant="h6" component="h3" className={classes.Text}>
-                10. Mutual Misunderstanding
-              </Typography>
-            </Grid>
+            <Link to={process.env.PUBLIC_URL + '/kuch-rang-pyaar-ke-aise-bhi-season-3-episode-10'}>
+              <Grid item xs={6}>
+                <Typography gutterBottom variant="h6" component="h3" className={classes.Text}>
+                  10. Mutual Misunderstanding
+                </Typography>
+              </Grid>
+            </Link>
 
             <Grid item xs={4}>
               <HdIcon />

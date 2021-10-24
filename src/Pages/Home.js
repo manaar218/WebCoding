@@ -18,6 +18,7 @@ export default function Home() {
       <Container fixed>
 
         <SimpleTabs />
+
         <SwipeableTextMobileStepper />
         <ResponsiveFontSizes />
         <SingleLineImageList />

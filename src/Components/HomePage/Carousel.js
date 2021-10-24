@@ -8,76 +8,85 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
- 
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
- 
+
 const tutorialSteps = [
   {
-    label: '',
     imgPath:
       'https://bingeddata.s3.amazonaws.com/uploads/2020/07/Avrodh-Sonyliv-Web-Series-Review-1.jpg',
   },
   {
-    label: '',
     imgPath:
       'https://webserieszworld.com/wp-content/uploads/2021/07/Chutzpah-Sony-Liv-Original-Web-Series-Cast-Release-Date-Story-768x432.jpg',
   },
   {
-    label: '',
     imgPath:
       'https://i.imgur.com/JM5k3Rl.jpg',
   },
   {
-    label: '',
     imgPath:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXVRa37Nc8Ev4qg91URyqJiTqVegkQPNvw4Oq8Nn-zJknUcWO50ZfZKWmNDwTxsA5Z5kg&usqp=CAU',
   },
   {
-    label: '',
     imgPath:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuUz81oycZdqQ3957PXbVDUNrE6RZW8MfdUpWfcfYdtfT5prAutfVGRQGytkJ7CAw_GM0&usqp=CAU',
   },
 ];
- 
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
+    // maxWidth: '100%',
+    // maxHeight: '100%',
     flexGrow: 1,
+    // margin: 0,
+    backgroundColor: '#1919a',
+
   },
-  header: {
+  stepper: {
     display: 'flex',
+    background: '#19191a',
     alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
+    flexDirection: 'row',
+    justifyContent: 'nowrap',
   },
+
+  // header: {
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   height: '90%',
+  //   width: '90%',
+  //   paddingLeft: theme.spacing(4),
+  //   backgroundColor: '#1919a',
+  // },
+
   img: {
-    height: 255,
+    height: '100%',
     display: 'block',
-    maxWidth: 400,
-    overflow: 'hidden',
+    alignItems: 'centre',
     width: '100%',
+    backgroundColor: '#1919a',
   },
 }));
- 
+
 function SwipeableTextMobileStepper() {
   const classes = useStyles();
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = tutorialSteps.length;
- 
+
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
- 
+
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
- 
+
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
- 
+
   return (
     <div className={classes.root}>
       <Paper square elevation={0} className={classes.header}>
@@ -97,26 +106,26 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        variant="text"
-        activeStep={activeStep}
-        nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
-            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
-          </Button>
-        }
-      />
+      <div className={classes.stepper}>
+        <MobileStepper
+          steps={maxSteps}
+          variant="progress"
+          position="static"
+          activeStep={activeStep}
+          nextButton={
+            <Button size="large" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+              {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
+            </Button>
+          }
+          backButton={
+            <Button size="large" onClick={handleBack} disabled={activeStep === 0}>
+              {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
+            </Button>
+          }
+        />
+      </div>
     </div>
   );
 }
- 
+
 export default SwipeableTextMobileStepper;

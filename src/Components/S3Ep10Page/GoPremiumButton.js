@@ -9,7 +9,7 @@ const images = [
     title: 'Go Premium',
     width: '40%',
   },
-  
+
 ];
 
 const useStyles = makeStyles((theme) => ({

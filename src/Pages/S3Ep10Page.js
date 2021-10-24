@@ -1,9 +1,8 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import ContainedButtons from '../Components/Episode100Page/UA13+';
-import Episode100BodyText from '../Components/Episode100Page/Episode100BodyText.js';
-import Episode100Title from '../Components/Episode100Page/Episode100Title';
-import ButtonBases from '../Components/Episode100Page/GoPremiumButton';
+import ContainedButtons from '../Components/S3Ep10Page/UA13+';
+import S3Ep10Title from '../Components/S3Ep10Page/S3Ep10Title';
+import ButtonBases from '../Components/S3Ep10Page/GoPremiumButton';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
@@ -14,10 +13,10 @@ import AddIcon from '@material-ui/icons/Add';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import { Link, Router } from "react-router-dom";
 import { Grid } from '@material-ui/core';
-import S1Ep100 from '../Assets/S1Ep100.jpg';
+import S3Ep10 from '../Assets/S3Ep10thumbnail1.jpg';
 import KBCad from '../Assets/KBCad.jpg';
 
-export default function Episode100Page() {
+export default function S3Ep10Page() {
   return (
     <React.Fragment>
       <Container fixed>
@@ -51,7 +50,7 @@ export default function Episode100Page() {
           </Grid>
 
           <Grid item xs={12} >
-            <img src={S1Ep100} className="Season - 1 Episode - 100" alt="Season - 1 Episode - 100" height='100%' width='100%' />
+            <img src={S3Ep10} className="Season - 3 Episode - 10" alt="Season - 3 Episode - 10" height='100%' width='100%' />
           </Grid>
 
           <Grid item xs={4}>
@@ -66,9 +65,9 @@ export default function Episode100Page() {
             <GetAppIcon /> Download     {/* 'Download' */}
           </Grid>
 
-          <Episode100Title />         {/* Title of Episode 100 */}
-          <Episode100BodyText />      {/* Body Text */}
-          <ButtonBases />             {/* 'Go Premium' */}
+          <S3Ep10Title />               {/* Title of Episode 100 */}
+
+          <ButtonBases />               {/* 'Go Premium' */}
           <img src={KBCad} className="Advertisement" alt="Advertisement" height='100%' width='100%' />
 
         </Grid>

@@ -12,15 +12,13 @@ import { Grid } from '@material-ui/core';
 const useStyles = makeStyles({
   root: {
     maxWidth: '100%',
-    background: 'black',
+    background: '#19191A',
   },
   media: {
     height: 20,
-    // background: 'black'
   },
   Text: {
     color: 'white',
-    // fontWeight: 'bold'
   }
 });
 
